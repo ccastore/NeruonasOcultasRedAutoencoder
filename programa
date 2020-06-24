@@ -1,11 +1,12 @@
+#----------------------solo para uso de google colab---------------------
 import numpy as np
 from google.colab import drive 
 drive.mount('/content/drive')
 
+#----------------------------importar libretias---------------------------
 import tensorflow as tf
 from tensorflow import keras
 import tensorflow.compat.v1 as tf
-
 from keras.models import Sequential, Model, load_model
 from keras.layers import Dense, Dropout, Activation,Input
 from keras.optimizers import SGD
@@ -26,12 +27,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.metrics import confusion_matrix, classification_report 
 
-
+#-------------------------------inicio----------------------------------
 #numero que identifica a la formula
+#para todas lasbases de datos estudiadas 3,4,6,13,14
+
 formulas=[3,4,6,13,14]
 
 #cantidad de neuronas calculadas para cada formula
-neurona=[8,6,2,360,8160]
+#BC [8,6,2,360,8160]
+#CN [6,5,2,170,2376]
+#CT [7,5,2, 47, 667]
+#DL [6,5,2,122,1342]
+#LC [11,7,2,99,4178]
+#LM [8,6,2,106,2376]
+#OT [13,7,2,86,5051]
+#PT [10,7,2,133,4200]
+
+neurona=[8,6,2,360,8160] 
 
 
 for x1 in range (len(formulas)):
