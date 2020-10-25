@@ -6,7 +6,7 @@ drive.mount('/content/drive')
 #----------------------------importar libretias---------------------------
 import tensorflow as tf
 from tensorflow import keras
-import tensorflow.compat.v1 as tf
+#import tensorflow.compat.v1 as tf
 from keras.models import Sequential, Model, load_model
 from keras.layers import Dense, Dropout, Activation,Input
 from keras.optimizers import SGD
